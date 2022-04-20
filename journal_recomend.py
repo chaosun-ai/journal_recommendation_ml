@@ -12,7 +12,7 @@ def journal_pred(paper_title, key_words):
     #print(label)
     label_encoder = load('le.joblib')
     journal_list = label_encoder.inverse_transform(label)
-    #print(journal_pred)
+    print(journal_pred)
 
     return journal_list
 
