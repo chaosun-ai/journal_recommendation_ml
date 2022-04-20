@@ -1,0 +1,7 @@
+git clone https://github.com/chaosun-ai/journal_recommendation_ml.git
+sudo apt-get update
+sudo apt-get install python3-pip
+sudo pip3 install --upgrade pip
+cd journal_recommendation_ml
+pip3 install --user -r requirements.txt 
+python3 journal_recommend.py
