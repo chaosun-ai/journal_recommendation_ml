@@ -1,3 +1,7 @@
+import numpy as np
+from tensorflow.keras.models import load_model
+from joblib import load
+
 def journal_pred(paper_title, key_words):
 
     input_text = [paper_title + key_words]
@@ -18,8 +22,9 @@ def journal_pred(paper_title, key_words):
 
 
 if __name__ == '__main__':
-    import numpy as np
-    from tensorflow.keras.models import load_model
-    from joblib import load
-    import sys
-    journal_pred(sys.argv[1],sys.argv[2])
+    
+    paper_title = 'Machine Learning for engineering journal selection'
+    key_words = 'machine learning engineering recommendation system'
+
+    journal_list = journal_pred(paper_title, key_words)
+    print(journal_list)
